@@ -7,9 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test';
-  name= "parent to child";
-
-
   users = [
     {
       name: 'Nishant',
@@ -44,15 +41,6 @@ export class AppComponent {
       age: 74
     },
   ];
-
-  showVal:any="";
-
-  show(val:any){
-    this.showVal=val;
-  }
-  display(data:string){
-    console.log(data);
-  }
 
 }
  

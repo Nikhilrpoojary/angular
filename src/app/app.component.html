@@ -1,16 +1,2 @@
-<div [ngClass]="'parent'">
-  <h3>Parent component</h3>
-<table> 
-  <tr><th>name</th><th>age</th></tr>
-
-    <tr *ngFor="let user of users">
-      <td>{{user.name}}</td>
-      <td>{{user.age}}</td>
-      <td><button (click)=show(user)>Details</button></td>  
-  </tr>
-</table>
-
-<h2 > Name : {{showVal.name}} </h2>
-<h2 >Age  : {{showVal.age}} </h2>
-</div>
-<app-child [hi]="name" (notify)="display($event)" ></app-child>
+<app-child [userData]="users"></app-child>
+<app-user-list></app-user-list>
