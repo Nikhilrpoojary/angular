@@ -1,2 +1,2 @@
-<app-child [userData]="users"></app-child>
-<app-user-list></app-user-list>
+<app-child [userData]="users" (notify)=render($event)></app-child>
+<app-user-list  [passedVal]="userDetails"></app-user-list>

@@ -12,9 +12,7 @@ import { Component, OnInit,Input,Output ,EventEmitter} from '@angular/core';
 export class ChildComponent implements OnInit {
  
   @Input() userData:any ;
-
-  @Output() 
-    notify:EventEmitter<string>= new EventEmitter();
+  @Output() notify:EventEmitter<any>= new EventEmitter();
 
   
   constructor() { }
@@ -26,10 +24,9 @@ export class ChildComponent implements OnInit {
 
   show(val:any){
     this.showVal=val;
-  }
+    console.log(this.showVal);
 
-  sendData(){
-    this.notify.emit("data from child")
+    this.notify.emit(this.showVal);
   }
 
 }

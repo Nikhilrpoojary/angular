@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  @Input() notify:any
+
   title = 'test';
   users = [
     {
@@ -42,5 +45,11 @@ export class AppComponent {
     },
   ];
 
+  userDetails:any=""
+
+  render(val:any){
+    
+    this.userDetails=val;
+  }
 }
  
